@@ -6,12 +6,12 @@ env:
   ManagementGroupPrefix: "alz"
   TopLevelManagementGroupDisplayName: "Azure Landing Zones"
   Location: "westeurope"
-  LoggingSubId: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+  LoggingSubId: "800615ec-b39b-4450-a1c0-e54e12b5cb77"
   LoggingResourceGroupName: "alz-logging"
-  HubNetworkSubId: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+  HubNetworkSubId: "8855b207-203f-485f-8d34-278281cf2ed6"
   HubNetworkResourceGroupName: "Hub_Networking_POC"
   RoleAssignmentManagementGroupId: "alz-platform"
-  SpokeNetworkSubId: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+  SpokeNetworkSubId: "a4d4da02-ed3c-48ed-ac1a-1961e1b6f24c"
   SpokeNetworkResourceGroupName: "Spoke_Networking_POC"
   runNumber: ${{ github.run_number }}
 
@@ -46,7 +46,7 @@ jobs:
           parameters: infra-as-code/bicep/modules/policy/definitions/parameters/customPolicyDefinitions.parameters.all.json
           deploymentName: create_policy_defs-${{ env.runNumber }}
           failOnStdErr: false
-        
+
       - name: Deploy Custom Role Definitions
         id: create_rbac_roles
         uses: azure/arm-deploy@v1
