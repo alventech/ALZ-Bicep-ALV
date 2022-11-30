@@ -6,12 +6,12 @@ env:
   ManagementGroupPrefix: "alz"
   TopLevelManagementGroupDisplayName: "Azure Landing Zones"
   Location: "westeurope"
-  LoggingSubId: ""
+  LoggingSubId: ${{ secrets.SUBSCRIPTION_ID  }}
   LoggingResourceGroupName: "alz-logging"
-  HubNetworkSubId: ""
+  HubNetworkSubId: ${{ secrets.HUBNETWORKSUB_ID  }}
   HubNetworkResourceGroupName: "Hub_Networking_POC"
   RoleAssignmentManagementGroupId: "alz-platform"
-  SpokeNetworkSubId: ""
+  SpokeNetworkSubId: ${{ secrets.SPOKENETWORKSUB_ID  }}
   SpokeNetworkResourceGroupName: "Spoke_Networking_POC"
   runNumber: ${{ github.run_number }}
 
