@@ -6,12 +6,12 @@ env:
   ManagementGroupPrefix: "alz"
   TopLevelManagementGroupDisplayName: "Azure Landing Zones"
   Location: "westeurope"
-  LoggingSubId: "800615ec-b39b-4450-a1c0-e54e12b5cb77"
+  LoggingSubId: ""
   LoggingResourceGroupName: "alz-logging"
-  HubNetworkSubId: "8855b207-203f-485f-8d34-278281cf2ed6"
+  HubNetworkSubId: ""
   HubNetworkResourceGroupName: "Hub_Networking_POC"
   RoleAssignmentManagementGroupId: "alz-platform"
-  SpokeNetworkSubId: "a4d4da02-ed3c-48ed-ac1a-1961e1b6f24c"
+  SpokeNetworkSubId: ""
   SpokeNetworkResourceGroupName: "Spoke_Networking_POC"
   runNumber: ${{ github.run_number }}
 
