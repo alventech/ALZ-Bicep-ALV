@@ -105,17 +105,6 @@ jobs:
           deploymentName: create_hub_network-${{ env.runNumber }}
           failOnStdErr: false
 
-      - name: Deploy Role Assignment
-        id: create_role_assignment
-        uses: azure/arm-deploy@v1
-        with:
-          scope: managementgroup
-          managementGroupId: ${{ env.RoleAssignmentManagementGroupId }}
-          region: ${{ env.Location }}
-          template: infra-as-code/bicep/modules/roleAssignments/roleAssignmentManagementGroup.bicep
-          parameters: infra-as-code/bicep/modules/roleAssignments/parameters/roleAssignmentManagementGroup.servicePrincipal.parameters.all.json
-          deploymentName: create_role_assignment-${{ env.runNumber }}
-          failOnStdErr: false
 
       - name: Deploy Subscription Placement
         id: create_subscription_placement
